@@ -59,7 +59,7 @@ with col3:
     file = st.file_uploader("Upload CSV file", type=["csv", "txt"])
 
     if file is not None:
-        df = pd.read_csv(file, header=None, names=["Message"], engine = "python",sep = "\n")
+        df = pd.read_csv(file, header=None, names=["Message"])
         st.dataframe(df, use_container_width=True)
 
         if st.button("Predict Bulk", key="bulk"):
